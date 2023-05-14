@@ -1,0 +1,9 @@
+{
+    "platformName": "android",
+    "platformVersion": "13.0",
+    "deviceName": "nexus9",
+    "automationName": "UiAutomator2",
+    "app": "BankingApp.apk",
+    "appPackage": "marcusobyrne.bankingapp",
+    "appActivity": ".MainActivity"
+}

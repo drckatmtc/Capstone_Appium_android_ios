@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Banking App Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Android Phone Test(failed)">
+    <classes>
+      <class name="tests_AndroidPhone.TC_BAA_03">
+        <methods>
+          <include name="login"/>
+          <include name="launchApp"/>
+          <include name="addTransaction"/>
+          <include name="createAccount"/>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="validateTransaction"/>
+          <include name="viewTransaction"/>
+        </methods>
+      </class> <!-- tests_AndroidPhone.TC_BAA_03 -->
+      <class name="tests_AndroidPhone.TC_BAA_02">
+        <methods>
+          <include name="login"/>
+          <include name="addTransaction"/>
+          <include name="close"/>
+          <include name="addCap"/>
+          <include name="viewTransaction"/>
+          <include name="setup"/>
+          <include name="launchApp"/>
+          <include name="validateTransaction"/>
+        </methods>
+      </class> <!-- tests_AndroidPhone.TC_BAA_02 -->
+      <class name="tests_AndroidPhone.TC_BAA_01">
+        <methods>
+          <include name="launchApp"/>
+          <include name="createAccount"/>
+          <include name="login"/>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="validateEnterDetails"/>
+        </methods>
+      </class> <!-- tests_AndroidPhone.TC_BAA_01 -->
+    </classes>
+  </test> <!-- Android Phone Test(failed) -->
+</suite> <!-- Failed suite [Banking App Suite] -->

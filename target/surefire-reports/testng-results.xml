@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="19" passed="18" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Further Detail]]>
+    </line>
+    <line>
+      <![CDATA[A Short Title Is Best]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-05-15T00:00:50 PST" name="Command line suite" finished-at="2023-05-15T00:03:26 PST" duration-ms="156023">
+    <groups>
+    </groups>
+    <test started-at="2023-05-15T00:00:50 PST" name="Command line test" finished-at="2023-05-15T00:03:26 PST" duration-ms="156023">
+      <class name="tests.TestIOS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:00:45 PST" name="beforeSuite" finished-at="2023-05-15T00:00:50 PST" duration-ms="5258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:07 PST" name="beforeClass" finished-at="2023-05-15T00:02:12 PST" duration-ms="4554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="UI_01()[pri:1, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:12 PST" name="UI_01" finished-at="2023-05-15T00:02:15 PST" duration-ms="3643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_01 -->
+        <test-method signature="UI_02()[pri:2, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:15 PST" name="UI_02" finished-at="2023-05-15T00:02:18 PST" duration-ms="2177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_02 -->
+        <test-method signature="UI_04()[pri:4, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:18 PST" name="UI_04" finished-at="2023-05-15T00:02:24 PST" duration-ms="5991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_04 -->
+        <test-method signature="UI_05()[pri:5, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:24 PST" name="UI_05" finished-at="2023-05-15T00:02:26 PST" duration-ms="2613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_05 -->
+        <test-method signature="UI_06()[pri:6, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:26 PST" name="UI_06" finished-at="2023-05-15T00:02:29 PST" duration-ms="3301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_06 -->
+        <test-method signature="UI_07()[pri:7, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:29 PST" name="UI_07" finished-at="2023-05-15T00:02:41 PST" duration-ms="11972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_07 -->
+        <test-method signature="UI_08()[pri:8, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:41 PST" name="UI_08" finished-at="2023-05-15T00:02:51 PST" duration-ms="9839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_08 -->
+        <test-method signature="UI_09()[pri:9, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:51 PST" name="UI_09" finished-at="2023-05-15T00:02:55 PST" duration-ms="4034" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_09 -->
+        <test-method signature="UI_10()[pri:10, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:02:55 PST" name="UI_10" finished-at="2023-05-15T00:03:00 PST" duration-ms="4960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_10 -->
+        <test-method signature="UI_11()[pri:11, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:03:00 PST" name="UI_11" finished-at="2023-05-15T00:03:04 PST" duration-ms="3509" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Further Detail]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UI_11 -->
+        <test-method signature="UI_12()[pri:12, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:03:04 PST" name="UI_12" finished-at="2023-05-15T00:03:06 PST" duration-ms="2267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_12 -->
+        <test-method signature="UI_13()[pri:13, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:03:06 PST" name="UI_13" finished-at="2023-05-15T00:03:14 PST" duration-ms="7784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_13 -->
+        <test-method signature="UI_14()[pri:14, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:03:14 PST" name="UI_14" finished-at="2023-05-15T00:03:18 PST" duration-ms="4067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_14 -->
+        <test-method signature="UI_15()[pri:15, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:03:18 PST" name="UI_15" finished-at="2023-05-15T00:03:22 PST" duration-ms="3590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UI_15 -->
+        <test-method signature="UI_17()[pri:16, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:03:22 PST" name="UI_17" finished-at="2023-05-15T00:03:25 PST" duration-ms="3753" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[A Short Title Is Best]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UI_17 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:03:25 PST" name="afterClass" finished-at="2023-05-15T00:03:26 PST" duration-ms="1107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.TestIOS@76b1e9b8]" started-at="2023-05-15T00:03:32 PST" name="afterSuite" finished-at="2023-05-15T00:03:32 PST" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- tests.TestIOS -->
+      <class name="tests.TestAndroid">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.TestAndroid@19d481b]" started-at="2023-05-15T00:00:50 PST" name="beforeSuite" finished-at="2023-05-15T00:00:50 PST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method signature="TC_BAA_01()[pri:1, instance:tests.TestAndroid@19d481b]" started-at="2023-05-15T00:00:50 PST" name="TC_BAA_01" finished-at="2023-05-15T00:01:23 PST" duration-ms="32471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_BAA_01 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.TestAndroid@19d481b]" started-at="2023-05-15T00:01:23 PST" name="close" finished-at="2023-05-15T00:01:23 PST" duration-ms="531" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method signature="TC_BAA_02()[pri:2, instance:tests.TestAndroid@19d481b]" started-at="2023-05-15T00:01:23 PST" name="TC_BAA_02" finished-at="2023-05-15T00:01:41 PST" duration-ms="17567" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_BAA_02 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.TestAndroid@19d481b]" started-at="2023-05-15T00:01:41 PST" name="close" finished-at="2023-05-15T00:01:41 PST" duration-ms="366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method signature="TC_BAA_03()[pri:3, instance:tests.TestAndroid@19d481b]" started-at="2023-05-15T00:01:41 PST" name="TC_BAA_03" finished-at="2023-05-15T00:02:06 PST" duration-ms="25014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_BAA_03 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.TestAndroid@19d481b]" started-at="2023-05-15T00:02:06 PST" name="close" finished-at="2023-05-15T00:02:07 PST" duration-ms="469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.TestAndroid@19d481b]" started-at="2023-05-15T00:02:07 PST" name="afterSuite" finished-at="2023-05-15T00:02:07 PST" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- tests.TestAndroid -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>TestNG:  Android Tablet Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Android Tablet Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>15/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri May 12 08:29:37 PST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>71 seconds (71593 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_02.launchApp()'><b>launchApp</b><br>Test class: tests_AndroidTablet.TC_BAA_02<br/>
+<a href="#Output-101676975" onClick='toggleBox("Output-101676975", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-101676975" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-101676975">
+Application is launched<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests_AndroidTablet.TC_BAA_02@59505b48</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_03.login()'><b>login</b><br>Test class: tests_AndroidTablet.TC_BAA_03</td>
+<td></td>
+<td>3</td>
+<td>tests_AndroidTablet.TC_BAA_03@4efac082</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_02.login()'><b>login</b><br>Test class: tests_AndroidTablet.TC_BAA_02</td>
+<td></td>
+<td>2</td>
+<td>tests_AndroidTablet.TC_BAA_02@59505b48</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_01.launchApp()'><b>launchApp</b><br>Test class: tests_AndroidTablet.TC_BAA_01<br/>
+<a href="#Output-919376773" onClick='toggleBox("Output-919376773", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-919376773" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-919376773">
+Application is launched<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests_AndroidTablet.TC_BAA_01@1b11171f</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_02.validateTransaction()'><b>validateTransaction</b><br>Test class: tests_AndroidTablet.TC_BAA_02<br/>
+<a href="#Output-1122297225" onClick='toggleBox("Output-1122297225", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1122297225" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1122297225">
+user1 Transaction: 
+test transfer user1
+11.1
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>tests_AndroidTablet.TC_BAA_02@59505b48</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_03.viewTransaction()'><b>viewTransaction</b><br>Test class: tests_AndroidTablet.TC_BAA_03</td>
+<td></td>
+<td>2</td>
+<td>tests_AndroidTablet.TC_BAA_03@4efac082</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_03.launchApp()'><b>launchApp</b><br>Test class: tests_AndroidTablet.TC_BAA_03<br/>
+<a href="#Output-935667786" onClick='toggleBox("Output-935667786", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-935667786" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-935667786">
+Application is launched<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>tests_AndroidTablet.TC_BAA_03@4efac082</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_01.login()'><b>login</b><br>Test class: tests_AndroidTablet.TC_BAA_01</td>
+<td></td>
+<td>4</td>
+<td>tests_AndroidTablet.TC_BAA_01@1b11171f</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_02.addTransaction()'><b>addTransaction</b><br>Test class: tests_AndroidTablet.TC_BAA_02</td>
+<td></td>
+<td>5</td>
+<td>tests_AndroidTablet.TC_BAA_02@59505b48</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_03.validateTransaction()'><b>validateTransaction</b><br>Test class: tests_AndroidTablet.TC_BAA_03<br/>
+<a href="#Output-1130250604" onClick='toggleBox("Output-1130250604", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1130250604" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1130250604">
+user2 Transaction: 
+test transfer user2
+11.1
+<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>tests_AndroidTablet.TC_BAA_03@4efac082</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_03.addTransaction()'><b>addTransaction</b><br>Test class: tests_AndroidTablet.TC_BAA_03</td>
+<td></td>
+<td>5</td>
+<td>tests_AndroidTablet.TC_BAA_03@4efac082</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_01.validateEnterDetails()'><b>validateEnterDetails</b><br>Test class: tests_AndroidTablet.TC_BAA_01</td>
+<td></td>
+<td>2</td>
+<td>tests_AndroidTablet.TC_BAA_01@1b11171f</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_03.createAccount()'><b>createAccount</b><br>Test class: tests_AndroidTablet.TC_BAA_03</td>
+<td></td>
+<td>7</td>
+<td>tests_AndroidTablet.TC_BAA_03@4efac082</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_02.viewTransaction()'><b>viewTransaction</b><br>Test class: tests_AndroidTablet.TC_BAA_02</td>
+<td></td>
+<td>1</td>
+<td>tests_AndroidTablet.TC_BAA_02@59505b48</td></tr>
+<tr>
+<td title='tests_AndroidTablet.TC_BAA_01.createAccount()'><b>createAccount</b><br>Test class: tests_AndroidTablet.TC_BAA_01</td>
+<td></td>
+<td>9</td>
+<td>tests_AndroidTablet.TC_BAA_01@1b11171f</td></tr>
+</table><p>
+</body>
+</html>

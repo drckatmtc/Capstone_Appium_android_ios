@@ -1,0 +1,8 @@
+{
+	"platformName": "iOS",
+	"platformVersion": "16.4",
+	"deviceName": "iPhone 14 Pro",
+	"automationName": "XCUITest",
+	"UDID": "D4EC34CC-B2F1-417C-8B8B-93AAF3F7A0C8",
+	"app": "UIKitCatalog.app"
+}
