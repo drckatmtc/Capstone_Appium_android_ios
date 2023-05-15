@@ -12,6 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -44,6 +45,9 @@ public class BaseClassAndroid {
 		try {
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			test.log(LogStatus.PASS, "Application launched successfully");
+			Thread.sleep(500);
+			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -64,6 +68,9 @@ public class BaseClassAndroid {
 		try {
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			test.log(LogStatus.PASS, "Application launched successfully");
+			Thread.sleep(500);
+			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

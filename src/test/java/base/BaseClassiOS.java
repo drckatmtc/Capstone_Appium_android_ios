@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeSuite;
 
 import com.google.common.collect.ImmutableList;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -37,7 +38,7 @@ public class BaseClassiOS {
 	public ExtentTest test;
 
 	@BeforeClass
-	public void beforeClass() throws FileNotFoundException, IOException, ParseException {
+	public void beforeClass() throws FileNotFoundException, IOException, ParseException, InterruptedException {
 
 		cap.setDeviceName(rJSON.getJSON(desiredCap, "deviceName"));
 		cap.setApp(System.getProperty("user.dir") + "/src/main/resources/resources/" + rJSON.getJSON(desiredCap, "app"));
@@ -46,6 +47,9 @@ public class BaseClassiOS {
 		cap.setUdid(rJSON.getJSON(desiredCap, "UDID"));
 		driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		test.log(LogStatus.PASS, "Application launched successfully");
+		Thread.sleep(500);
+		test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 	}
 
 	@AfterClass

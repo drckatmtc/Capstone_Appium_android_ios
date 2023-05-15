@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
 
 import base.BaseClassAndroid;
+import utils.ExtentReport;
 import utils.ReadExcel;
 
 public class TestAndroid extends BaseClassAndroid {
@@ -17,6 +18,7 @@ public class TestAndroid extends BaseClassAndroid {
 	public void TC_BAA_01() throws Exception {
 		setup1();
 		try {
+			
 			String name = ReadExcel.readByColumnName("Credential", "Name", 1);
 			String addLine1 = ReadExcel.readByColumnName("Credential", "AddressLine1", 1);
 			String addLine2 = ReadExcel.readByColumnName("Credential", "AddressLine2", 1);
@@ -56,10 +58,12 @@ public class TestAndroid extends BaseClassAndroid {
 			AssertJUnit.assertEquals(pinEle.getText(), pin);
 			WebElement currBalEle = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewBalance"));
 			AssertJUnit.assertEquals(currBalEle.getText(), currBal);
+			
+			test.log(LogStatus.PASS, "Entered details");
+			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 
 			driver.navigate().back();
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // acc info btn
-//			test.log(LogStatus.INFO, "Application is closed");
 
 			Assert.assertTrue(true);
 			test.log(LogStatus.PASS, "TC_BAA_01");
@@ -98,6 +102,7 @@ public class TestAndroid extends BaseClassAndroid {
 			String log = name + " Transaction: \n" + descEle.getText();
 			AssertJUnit.assertEquals(true, descEle.isDisplayed());
 			test.log(LogStatus.PASS, log);
+			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 
 			// for logout
 			driver.navigate().back();
@@ -154,6 +159,7 @@ public class TestAndroid extends BaseClassAndroid {
 			String log = name + " Transaction: \n" + descEle.getText();
 			AssertJUnit.assertEquals(true, descEle.isDisplayed());
 			test.log(LogStatus.PASS, log);
+			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 
 			// for logout
 			driver.navigate().back();

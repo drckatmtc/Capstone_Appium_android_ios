@@ -3,29 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TestIOS">
+      <class name="tests.TestAndroid">
         <methods>
-          <include name="afterSuite"/>
-          <include name="afterClass"/>
-          <include name="UI_10"/>
-          <include name="UI_02"/>
-          <include name="UI_13"/>
-          <include name="UI_01"/>
-          <include name="UI_12"/>
-          <include name="UI_04"/>
-          <include name="UI_15"/>
-          <include name="beforeClass"/>
-          <include name="UI_11"/>
-          <include name="UI_07"/>
-          <include name="UI_09"/>
-          <include name="UI_14"/>
-          <include name="UI_06"/>
-          <include name="UI_17"/>
-          <include name="UI_05"/>
-          <include name="UI_08"/>
+          <include name="TC_BAA_01"/>
+          <include name="close"/>
           <include name="beforeSuite"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- tests.TestIOS -->
+      </class> <!-- tests.TestAndroid -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
