@@ -1,10 +1,5 @@
 package tests;
 
-import org.testng.annotations.Test;
-
-import com.relevantcodes.extentreports.LogStatus;
-
-import base.BaseClassiOS;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -12,7 +7,11 @@ import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.AssertJUnit;
-import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.LogStatus;
+
+import base.BaseClassiOS;
 import io.appium.java_client.AppiumBy;
 import utils.ExtentReport;
 
@@ -28,8 +27,9 @@ public class TestIOS extends BaseClassiOS {
 			List<WebElement> option = driver
 					.findElements(AppiumBy.iOSNsPredicateString("type == \"XCUIElementTypeCell\""));
 			String optCount = "Options count: " + option.size();
-			Assert.assertTrue(true);
+
 			test.log(LogStatus.PASS, "UI_01: " + optCount);
+			Assert.assertTrue(true);
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -42,11 +42,11 @@ public class TestIOS extends BaseClassiOS {
 	public void UI_02() throws InterruptedException {
 		try {
 			driver.findElement(AppiumBy.accessibilityId("Activity Indicators")).click();
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+
 			Thread.sleep(500);
+			test.log(LogStatus.PASS, "UI_02" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 			navigateBack();
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_02");
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -70,10 +70,9 @@ public class TestIOS extends BaseClassiOS {
 			driver.findElements(AppiumBy.iOSClassChain("**/XCUIElementTypeButton")).get(0).click();
 
 			Assert.assertEquals(timeEle.getText(), "7:46 PM");
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
 
-			test.log(LogStatus.PASS, "UI_03");
+			test.log(LogStatus.PASS, "UI_03" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -89,11 +88,10 @@ public class TestIOS extends BaseClassiOS {
 			Thread.sleep(4000);
 			List<WebElement> image = driver.findElements(AppiumBy.accessibilityId("Animated"));
 			String imgCount = "Image count: " + image.size();
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
 
+			test.log(LogStatus.PASS, "UI_04: " + imgCount + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_04: " + imgCount);
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -108,10 +106,10 @@ public class TestIOS extends BaseClassiOS {
 			WebElement indicatorDots = driver.findElement(AppiumBy.xpath("//XCUIElementTypePageIndicator"));
 			indicatorDots.click();
 			indicatorDots.click();
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
+
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_05");
+			test.log(LogStatus.PASS, "UI_05" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -138,9 +136,10 @@ public class TestIOS extends BaseClassiOS {
 			String result = rEle.getText() + gEle.getText() + bEle.getText();
 
 			Assert.assertNotEquals(defaultValue, result);
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+
+			test.log(LogStatus.PASS, "UI_06: " + "Default RGB value: " + defaultValue + "\nResult RGB value: " + result
+					+ test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 			navigateBack();
-			test.log(LogStatus.PASS, "UI_06: " + "Default RGB value: " + defaultValue + "\nResult RGB value: " + result);
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -165,10 +164,10 @@ public class TestIOS extends BaseClassiOS {
 			watch.stop();
 
 			String elapsedTime = "Elapsed Time: " + watch.getTime(TimeUnit.SECONDS) + " seconds";
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
+
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_07: " + elapsedTime);
+			test.log(LogStatus.PASS, "UI_07: " + elapsedTime + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -192,11 +191,11 @@ public class TestIOS extends BaseClassiOS {
 				String str = String.valueOf(search.charAt(i));
 				driver.findElement(AppiumBy.accessibilityId(str)).click();
 			}
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
-			driver.navigate().back();
+			
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_08");
+			test.log(LogStatus.PASS, "UI_08" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			driver.navigate().back();
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -212,10 +211,10 @@ public class TestIOS extends BaseClassiOS {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == \"Tools\"`][1]")).click();
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == \"Check\"`][2]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Gift")).click();
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
+
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_09");
+			test.log(LogStatus.PASS, "UI_09" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -231,10 +230,10 @@ public class TestIOS extends BaseClassiOS {
 			driver.findElements(AppiumBy.xpath("//XCUIElementTypeSlider")).get(0).sendKeys("0");
 			driver.findElements(AppiumBy.xpath("//XCUIElementTypeSlider")).get(1).sendKeys("1");
 			driver.findElements(AppiumBy.xpath("//XCUIElementTypeSlider")).get(2).sendKeys("0.5");
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
+			
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_10");
+			test.log(LogStatus.PASS, "UI_10" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -256,13 +255,12 @@ public class TestIOS extends BaseClassiOS {
 
 			driver.findElements(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == \"stepper increment\"`]"))
 					.get(0).click();
-			
+
 			WebElement box = driver.findElement(AppiumBy.xpath("//XCUIElementTypeOther[3]/XCUIElementTypeOther"));
-			AssertJUnit.assertTrue(box.isDisplayed());
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			AssertJUnit.assertTrue(box.isDisplayed());		
+			
+			test.log(LogStatus.PASS, "UI_11: " + log + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 			navigateBack();
-			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_11: " + log);
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -275,16 +273,16 @@ public class TestIOS extends BaseClassiOS {
 		try {
 			driver.findElement(AppiumBy.accessibilityId("Switches")).click();
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeSwitch[1]")).click();
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
+			
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_12");
+			test.log(LogStatus.PASS, "UI_12" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
 			test.log(LogStatus.FAIL, "UI_12");
 		}
-		
+
 	}
 
 	@Test(priority = 13)
@@ -295,20 +293,21 @@ public class TestIOS extends BaseClassiOS {
 
 			driver.findElements(AppiumBy.xpath("//XCUIElementTypeTextField")).get(0).sendKeys(str);
 			driver.findElements(AppiumBy.xpath("//XCUIElementTypeTextField")).get(1).sendKeys(str);
-			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeSecureTextField[`value == \"Placeholder text\"`]"))
+			driver.findElement(
+					AppiumBy.iOSClassChain("**/XCUIElementTypeSecureTextField[`value == \"Placeholder text\"`]"))
 					.sendKeys(str);
 			driver.findElements(AppiumBy.xpath("//XCUIElementTypeTextField")).get(2).sendKeys(str);
 			driver.findElements(AppiumBy.xpath("//XCUIElementTypeTextField")).get(3).sendKeys(str);
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
-			navigateBack();
+			
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_13");
+			test.log(LogStatus.PASS, "UI_13" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			navigateBack();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
 			test.log(LogStatus.FAIL, "UI_13");
 		}
-		
+
 	}
 
 	@Test(priority = 14)
@@ -317,17 +316,17 @@ public class TestIOS extends BaseClassiOS {
 			driver.findElement(AppiumBy.accessibilityId("Toolbars")).click();
 			driver.findElement(AppiumBy.accessibilityId("Default")).click();
 			driver.findElement(AppiumBy.accessibilityId("Delete")).click();
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			
+			Assert.assertTrue(true);
+			test.log(LogStatus.PASS, "UI_14" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 			driver.navigate().back();
 			navigateBack();
-			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "UI_14");
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
 			test.log(LogStatus.FAIL, "UI_14");
 		}
-		
+
 	}
 
 	@Test(priority = 15)
@@ -341,9 +340,9 @@ public class TestIOS extends BaseClassiOS {
 					.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"WKWebView\"`]"));
 			String log = text1.getText() + text2.getText();
 			AssertJUnit.assertTrue(text1.isDisplayed());
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			
+			test.log(LogStatus.PASS, "UI_15: " + log + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 			navigateBack();
-			test.log(LogStatus.PASS, "UI_15: " + log);
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
@@ -362,10 +361,11 @@ public class TestIOS extends BaseClassiOS {
 			String log = alert.getText();
 			AssertJUnit.assertTrue(alert.isDisplayed());
 			AssertJUnit.assertEquals(log, "A Short Title Is Best");
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+
+			test.log(LogStatus.PASS, "UI_17: " + log + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			
 			driver.findElement(AppiumBy.accessibilityId("Choice Two")).click();
 			navigateBack();
-			test.log(LogStatus.PASS, "UI_17: " + log);
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);

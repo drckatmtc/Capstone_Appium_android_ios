@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TestAndroid">
+      <class name="tests.Test_Android">
         <methods>
           <include name="TC_BAA_01"/>
           <include name="close"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
         </methods>
-      </class> <!-- tests.TestAndroid -->
+      </class> <!-- tests.Test_Android -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

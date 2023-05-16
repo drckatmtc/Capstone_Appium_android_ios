@@ -41,33 +41,35 @@ public class BaseClassiOS {
 	public void beforeClass() throws FileNotFoundException, IOException, ParseException, InterruptedException {
 
 		cap.setDeviceName(rJSON.getJSON(desiredCap, "deviceName"));
-		cap.setApp(System.getProperty("user.dir") + "/src/main/resources/resources/" + rJSON.getJSON(desiredCap, "app"));
+		cap.setApp(
+				System.getProperty("user.dir") + "/src/main/resources/resources/" + rJSON.getJSON(desiredCap, "app"));
 		cap.setPlatformName(rJSON.getJSON(desiredCap, "platformName"));
 		cap.setAutomationName(rJSON.getJSON(desiredCap, "automationName"));
 		cap.setUdid(rJSON.getJSON(desiredCap, "UDID"));
 		driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		test.log(LogStatus.PASS, "Application launched successfully");
+
 		Thread.sleep(500);
-		test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+		test.log(LogStatus.PASS,
+				"Application launched successfully" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 	}
 
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}
-	
+
 	@BeforeSuite
 	public void beforeSuite() {
 		test = ExtentReport.generateExtentReport();
 	}
-	
+
 	@AfterSuite
 	public void afterSuite() {
 		ExtentReport.closeExtentReport();
 	}
-	
-	public void navigateBack() throws FileNotFoundException, IOException, ParseException  {
+
+	public void navigateBack() throws FileNotFoundException, IOException, ParseException {
 		if (rJSON.getJSON(desiredCap, "deviceName").equals("iPhone 14 Pro")) {
 			driver.navigate().back();
 		}

@@ -16,6 +16,7 @@ public class TestAndroid extends BaseClassAndroid {
 
 	@Test(priority = 1)
 	public void TC_BAA_01() throws Exception {
+		test.log(LogStatus.INFO, "Test Case: BAA_01 is started");
 		setup1();
 		try {
 			
@@ -27,7 +28,7 @@ public class TestAndroid extends BaseClassAndroid {
 			String currBal = ReadExcel.readByColumnName("Credential", "CurrentBal", 1);
 
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/createAccount")).click(); // create account btn
-
+			test.log(LogStatus.INFO, "Account Creation");
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Name")).sendKeys(name);
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Address1")).sendKeys(addLine1);
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Address2")).sendKeys(addLine2);
@@ -39,6 +40,7 @@ public class TestAndroid extends BaseClassAndroid {
 			driver.findElement(By.id("android:id/button3")).click(); // ok btn
 
 //			Login
+			test.log(LogStatus.INFO, "Account Login");
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); // pin tb
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
@@ -46,6 +48,7 @@ public class TestAndroid extends BaseClassAndroid {
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/button")).click(); // acc info btn
 
 //			Validation
+			test.log(LogStatus.INFO, "Account Validation");
 			WebElement nameEle = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewName"));
 			AssertJUnit.assertEquals(nameEle.getText(), name);
 			WebElement addLine1Ele = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewAddress1"));
@@ -58,9 +61,8 @@ public class TestAndroid extends BaseClassAndroid {
 			AssertJUnit.assertEquals(pinEle.getText(), pin);
 			WebElement currBalEle = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewBalance"));
 			AssertJUnit.assertEquals(currBalEle.getText(), currBal);
-			
-			test.log(LogStatus.PASS, "Entered details");
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+
+			test.log(LogStatus.PASS, "Entered details" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 
 			driver.navigate().back();
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // acc info btn
@@ -77,18 +79,21 @@ public class TestAndroid extends BaseClassAndroid {
 
 	@Test(priority = 2)
 	public void TC_BAA_02() throws Exception {
+		test.log(LogStatus.INFO, "Test Case: BAA_02 is started");
 		setup2();
 		try {
+			
 			String name = ReadExcel.readByColumnName("Credential", "Name", 1);
-
 			String pin = ReadExcel.readByColumnName("Credential", "PIN", 1);
 			String transDesc = ReadExcel.readByColumnName("Transaction", "Description", 1);
 			String transAmount = ReadExcel.readByColumnName("Transaction", "Amount", 1);
 
+			test.log(LogStatus.INFO, "Account Login");
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); // pin tb
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
 
+			test.log(LogStatus.INFO, "Add Transaction");
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonAddTrans")).click(); // add trans btn
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextDecription")).sendKeys(transDesc); // desc tb
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextAmount")).sendKeys(transAmount); // desc tb
@@ -97,12 +102,12 @@ public class TestAndroid extends BaseClassAndroid {
 			driver.findElement(By.id("android:id/button3")).click(); // ok
 
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonViewTrans")).click(); // view trans
-
+			test.log(LogStatus.INFO, "View Transaction");
+			
 			WebElement descEle = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewTransactions"));
 			String log = name + " Transaction: \n" + descEle.getText();
 			AssertJUnit.assertEquals(true, descEle.isDisplayed());
-			test.log(LogStatus.PASS, log);
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			test.log(LogStatus.PASS, log + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 
 			// for logout
 			driver.navigate().back();
@@ -119,8 +124,10 @@ public class TestAndroid extends BaseClassAndroid {
 
 	@Test(priority = 3)
 	public void TC_BAA_03() throws Exception {
+		test.log(LogStatus.INFO, "Test Case: BAA_03 is started");
 		setup1();
 		try {
+
 			String name = ReadExcel.readByColumnName("Credential", "Name", 2);
 			String addLine1 = ReadExcel.readByColumnName("Credential", "AddressLine1", 2);
 			String addLine2 = ReadExcel.readByColumnName("Credential", "AddressLine2", 2);
@@ -131,7 +138,8 @@ public class TestAndroid extends BaseClassAndroid {
 			String transAmount = ReadExcel.readByColumnName("Transaction", "Amount", 2);
 
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/createAccount")).click(); // create account btn
-
+			test.log(LogStatus.INFO, "Account Creation");
+			
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Name")).sendKeys(name);
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Address1")).sendKeys(addLine1);
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Address2")).sendKeys(addLine2);
@@ -142,29 +150,31 @@ public class TestAndroid extends BaseClassAndroid {
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/saveUser")).click(); // save user btn
 			driver.findElement(By.id("android:id/button3")).click(); // ok btn
 			
+			test.log(LogStatus.INFO, "Account Login");
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); // pin tb
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
 			
+			test.log(LogStatus.INFO, "Add Transaction");
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonAddTrans")).click(); // add trans btn
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextDecription")).sendKeys(transDesc); // desc tb
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextAmount")).sendKeys(transAmount); // desc tb
 			hideKeyboard();
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/button2")).click(); // add trans btn
 			driver.findElement(By.id("android:id/button3")).click(); // ok
-			
+
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonViewTrans")).click(); // view trans
-			
+			test.log(LogStatus.INFO, "View Transaction");
+
 			WebElement descEle = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewTransactions"));
 			String log = name + " Transaction: \n" + descEle.getText();
 			AssertJUnit.assertEquals(true, descEle.isDisplayed());
-			test.log(LogStatus.PASS, log);
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			test.log(LogStatus.PASS, log + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 
 			// for logout
 			driver.navigate().back();
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // acc info btn
-			
+
 			Assert.assertTrue(true);
 			test.log(LogStatus.PASS, "TC_BAA_03");
 		} catch (Exception e) {

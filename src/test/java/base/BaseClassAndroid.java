@@ -21,7 +21,7 @@ import utils.ReadConfig;
 import utils.ReadJSON;
 
 public class BaseClassAndroid {
-	
+
 	public AndroidDriver driver;
 	public ReadConfig cf = new ReadConfig();
 	public String desiredCap = cf.getAndroidPhone();
@@ -29,7 +29,7 @@ public class BaseClassAndroid {
 	public DesiredCapabilities cap = new DesiredCapabilities();
 	public ReadJSON rJSON = new ReadJSON();
 	public ExtentTest test;
-	
+
 	public void setup1() throws Exception {
 
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, rJSON.getJSON(desiredCap, "deviceName"));
@@ -45,14 +45,15 @@ public class BaseClassAndroid {
 		try {
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			test.log(LogStatus.PASS, "Application launched successfully");
+
 			Thread.sleep(500);
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			test.log(LogStatus.PASS,
+					"Application launched successfully" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void setup2() throws Exception {
 
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, rJSON.getJSON(desiredCap, "deviceName"));
@@ -68,30 +69,26 @@ public class BaseClassAndroid {
 		try {
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			test.log(LogStatus.PASS, "Application launched successfully");
+			
 			Thread.sleep(500);
-			test.log(LogStatus.INFO, test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
+			test.log(LogStatus.PASS,
+					"Application launched successfully" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void hideKeyboard() throws FileNotFoundException, IOException, ParseException {
 		if (rJSON.getJSON(desiredCap, "deviceName").equals("nexus9")) {
 			driver.hideKeyboard();
 		}
-	}
-	
-	
-	public void closeSetup() {
-		driver.quit();
 	}
 
 	@BeforeClass
 	public void beforeSuite() {
 		test = ExtentReport.generateExtentReport();
 	}
-	
+
 	@AfterClass
 	public void afterSuite() {
 		ExtentReport.closeExtentReport();

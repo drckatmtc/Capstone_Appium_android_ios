@@ -21,8 +21,8 @@ public class ExtentReport {
 
 	public static ExtentTest generateExtentReport() {
 		String dateNameER = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-		report = new ExtentReports(dateNameER + "/ExtentReport.html");
-		test = report.startTest("Extent Report");
+		report = new ExtentReports("report - " + dateNameER + "/ExtentReport.html");
+		test = report.startTest("Appium Extent Report");
 		return test;
 	}
 
@@ -45,4 +45,5 @@ public class ExtentReport {
 		}
 		return ssLocation.toString();
 	}
+	
 }
