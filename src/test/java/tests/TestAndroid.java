@@ -2,7 +2,6 @@ package tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
@@ -68,11 +67,11 @@ public class TestAndroid extends BaseClassAndroid {
 			driver.navigate().back();
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // account info button
 
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 			test.log(LogStatus.PASS, "TC_BAA_01");
 		} catch (Exception e) {
 			e.printStackTrace();
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 			test.log(LogStatus.FAIL, "TC_BAA_01");
 		}
 
@@ -114,11 +113,11 @@ public class TestAndroid extends BaseClassAndroid {
 			driver.navigate().back();
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // account info button
 
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 			test.log(LogStatus.PASS, "TC_BAA_02");
 		} catch (Exception e) {
 			e.printStackTrace();
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 			test.log(LogStatus.FAIL, "TC_BAA_02");
 		}
 	}
@@ -175,11 +174,11 @@ public class TestAndroid extends BaseClassAndroid {
 			// for logout
 			driver.navigate().back();
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // account info button
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 			test.log(LogStatus.PASS, "TC_BAA_03");
 		} catch (Exception e) {
 			e.printStackTrace();
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 			test.log(LogStatus.FAIL, "TC_BAA_03");
 		}
 	}

@@ -9,12 +9,59 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">80,165</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">15</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">88,572</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">tests.TestAndroid</td><td><a href="#m0">TC_BAA_01</a></td><td rowspan="1">1684217183247</td><td rowspan="1">26140</td></tr><tr class="passedeven"><td><a href="#m1">TC_BAA_02</a></td><td rowspan="1">1684217209913</td><td rowspan="1">19376</td></tr><tr class="passedeven"><td><a href="#m2">TC_BAA_03</a></td><td rowspan="1">1684217229757</td><td rowspan="1">27512</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.TestIOS</td><td><a href="#m0">UI_03</a></td><td rowspan="1">1684326485652</td><td rowspan="1">3790</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="15">tests.TestIOS</td><td><a href="#m1">UI_01</a></td><td rowspan="1">1684326480415</td><td rowspan="1">3656</td></tr><tr class="passedeven"><td><a href="#m2">UI_02</a></td><td rowspan="1">1684326484077</td><td rowspan="1">1572</td></tr><tr class="passedeven"><td><a href="#m3">UI_04</a></td><td rowspan="1">1684326489449</td><td rowspan="1">6387</td></tr><tr class="passedeven"><td><a href="#m4">UI_05</a></td><td rowspan="1">1684326495840</td><td rowspan="1">2845</td></tr><tr class="passedeven"><td><a href="#m5">UI_06</a></td><td rowspan="1">1684326498690</td><td rowspan="1">3259</td></tr><tr class="passedeven"><td><a href="#m6">UI_07</a></td><td rowspan="1">1684326501954</td><td rowspan="1">12259</td></tr><tr class="passedeven"><td><a href="#m7">UI_08</a></td><td rowspan="1">1684326514219</td><td rowspan="1">9120</td></tr><tr class="passedeven"><td><a href="#m8">UI_09</a></td><td rowspan="1">1684326523345</td><td rowspan="1">4947</td></tr><tr class="passedeven"><td><a href="#m9">UI_10</a></td><td rowspan="1">1684326528295</td><td rowspan="1">4572</td></tr><tr class="passedeven"><td><a href="#m10">UI_11</a></td><td rowspan="1">1684326532872</td><td rowspan="1">3685</td></tr><tr class="passedeven"><td><a href="#m11">UI_12</a></td><td rowspan="1">1684326536560</td><td rowspan="1">2396</td></tr><tr class="passedeven"><td><a href="#m12">UI_13</a></td><td rowspan="1">1684326538959</td><td rowspan="1">7791</td></tr><tr class="passedeven"><td><a href="#m13">UI_14</a></td><td rowspan="1">1684326546756</td><td rowspan="1">3573</td></tr><tr class="passedeven"><td><a href="#m14">UI_15</a></td><td rowspan="1">1684326550335</td><td rowspan="1">5014</td></tr><tr class="passedeven"><td><a href="#m15">UI_17</a></td><td rowspan="1">1684326555351</td><td rowspan="1">3839</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">tests.TestAndroid#TC_BAA_01</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.TestAndroid#TC_BAA_02</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.TestAndroid#TC_BAA_03</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">tests.TestIOS#UI_03</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at tests.TestIOS.UI_03(TestIOS.java:86)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.TestIOS#UI_01</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.TestIOS#UI_02</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.TestIOS#UI_04</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.TestIOS#UI_05</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.TestIOS#UI_06</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.TestIOS#UI_07</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.TestIOS#UI_08</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.TestIOS#UI_09</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.TestIOS#UI_10</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.TestIOS#UI_11</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.TestIOS#UI_12</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.TestIOS#UI_13</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.TestIOS#UI_14</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.TestIOS#UI_15</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">tests.TestIOS#UI_17</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
