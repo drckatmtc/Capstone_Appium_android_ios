@@ -28,16 +28,6 @@ public class ReadConfig {
 		}
 	}
 	
-	public  String getAndroid() {
-		String androidPhone = properties.getProperty("android");
-		
-		if (androidPhone != null) {
-			return androidPhone;
-		} else {
-			throw new RuntimeException("androidPhone not specified in the Configuration.properties");
-		}
-	}
-	
 	public  String getAndroidPhone() {
 		String androidPhone = properties.getProperty("androidPhone");
 		

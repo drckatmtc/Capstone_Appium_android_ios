@@ -27,7 +27,7 @@ public class TestAndroid extends BaseClassAndroid {
 			String pin = ReadExcel.readByColumnName("Credential", "PIN", 1);
 			String currBal = ReadExcel.readByColumnName("Credential", "CurrentBal", 1);
 
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/createAccount")).click(); // create account btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/createAccount")).click(); // create account button
 			test.log(LogStatus.INFO, "Account Creation");
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Name")).sendKeys(name);
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Address1")).sendKeys(addLine1);
@@ -36,18 +36,18 @@ public class TestAndroid extends BaseClassAndroid {
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/PINno")).sendKeys(pin);
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Balance")).sendKeys(currBal);
 
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/saveUser")).click(); // save user btn
-			driver.findElement(By.id("android:id/button3")).click(); // ok btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/saveUser")).click(); // save user button
+			driver.findElement(By.id("android:id/button3")).click(); // OK button
 
-//			Login
+			//	Login
 			test.log(LogStatus.INFO, "Account Login");
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); // pin tb
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login button
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); 
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); 
 
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/button")).click(); // acc info btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/button")).click(); // account info button
 
-//			Validation
+			//	Validation
 			test.log(LogStatus.INFO, "Account Validation");
 			WebElement nameEle = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewName"));
 			AssertJUnit.assertEquals(nameEle.getText(), name);
@@ -64,8 +64,9 @@ public class TestAndroid extends BaseClassAndroid {
 
 			test.log(LogStatus.PASS, "Entered details" + test.addScreenCapture(ExtentReport.takeScreenShot(driver)));
 
+			// for logout
 			driver.navigate().back();
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // acc info btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // account info button
 
 			Assert.assertTrue(true);
 			test.log(LogStatus.PASS, "TC_BAA_01");
@@ -89,19 +90,19 @@ public class TestAndroid extends BaseClassAndroid {
 			String transAmount = ReadExcel.readByColumnName("Transaction", "Amount", 1);
 
 			test.log(LogStatus.INFO, "Account Login");
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); // pin tb
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login button
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); 
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); 
 
 			test.log(LogStatus.INFO, "Add Transaction");
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonAddTrans")).click(); // add trans btn
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextDecription")).sendKeys(transDesc); // desc tb
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextAmount")).sendKeys(transAmount); // desc tb
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonAddTrans")).click(); // add transaction button
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextDecription")).sendKeys(transDesc); 
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextAmount")).sendKeys(transAmount); 
 			hideKeyboard();
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/button2")).click(); // add trans btn
-			driver.findElement(By.id("android:id/button3")).click(); // ok
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/button2")).click(); // add transaction button
+			driver.findElement(By.id("android:id/button3")).click(); // OK button
 
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonViewTrans")).click(); // view trans
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonViewTrans")).click(); // view transaction button
 			test.log(LogStatus.INFO, "View Transaction");
 			
 			WebElement descEle = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewTransactions"));
@@ -111,7 +112,7 @@ public class TestAndroid extends BaseClassAndroid {
 
 			// for logout
 			driver.navigate().back();
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // acc info btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // account info button
 
 			Assert.assertTrue(true);
 			test.log(LogStatus.PASS, "TC_BAA_02");
@@ -137,7 +138,7 @@ public class TestAndroid extends BaseClassAndroid {
 			String transDesc = ReadExcel.readByColumnName("Transaction", "Description", 2);
 			String transAmount = ReadExcel.readByColumnName("Transaction", "Amount", 2);
 
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/createAccount")).click(); // create account btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/createAccount")).click(); // create account button
 			test.log(LogStatus.INFO, "Account Creation");
 			
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Name")).sendKeys(name);
@@ -147,23 +148,23 @@ public class TestAndroid extends BaseClassAndroid {
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/PINno")).sendKeys(pin);
 			driver.findElement(By.id("marcusobyrne.bankingapp:id/Balance")).sendKeys(currBal);
 
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/saveUser")).click(); // save user btn
-			driver.findElement(By.id("android:id/button3")).click(); // ok btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/saveUser")).click(); // save user button
+			driver.findElement(By.id("android:id/button3")).click(); // OK button
 			
 			test.log(LogStatus.INFO, "Account Login");
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); // pin tb
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login btn
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); // login button
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/enteredPIN")).sendKeys(pin); 
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/loginButton")).click(); 
 			
 			test.log(LogStatus.INFO, "Add Transaction");
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonAddTrans")).click(); // add trans btn
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextDecription")).sendKeys(transDesc); // desc tb
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextAmount")).sendKeys(transAmount); // desc tb
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonAddTrans")).click(); // add transaction button
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextDecription")).sendKeys(transDesc); 
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/editTextAmount")).sendKeys(transAmount); 
 			hideKeyboard();
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/button2")).click(); // add trans btn
-			driver.findElement(By.id("android:id/button3")).click(); // ok
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/button2")).click(); // add transaction button
+			driver.findElement(By.id("android:id/button3")).click(); // OK button
 
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonViewTrans")).click(); // view trans
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonViewTrans")).click(); // view transaction button
 			test.log(LogStatus.INFO, "View Transaction");
 
 			WebElement descEle = driver.findElement(By.id("marcusobyrne.bankingapp:id/textViewTransactions"));
@@ -173,8 +174,7 @@ public class TestAndroid extends BaseClassAndroid {
 
 			// for logout
 			driver.navigate().back();
-			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // acc info btn
-
+			driver.findElement(By.id("marcusobyrne.bankingapp:id/buttonLogout")).click(); // account info button
 			Assert.assertTrue(true);
 			test.log(LogStatus.PASS, "TC_BAA_03");
 		} catch (Exception e) {

@@ -15,14 +15,14 @@ public class ReadJSON {
 	static ReadConfig cf = new ReadConfig();
 
 	public String getJSON(String path, String cap) throws FileNotFoundException, IOException, ParseException {
-//		try {
-		Object obj = parser.parse(new FileReader(path));
-		JSONObject jsonObject = (JSONObject) obj;
-		jsonVal = (String) jsonObject.get(cap);
-
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+		try {
+			Object obj = parser.parse(new FileReader(path));
+			JSONObject jsonObject = (JSONObject) obj;
+			jsonVal = (String) jsonObject.get(cap);
+	
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return jsonVal;
 	}
 
